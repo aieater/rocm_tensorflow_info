@@ -203,6 +203,9 @@ ls -la /dev/dri/ # Display and OpenCL file descriptors
 ```
 
 
+Also see https://www.gpueater.com/help
+
+
 
 
 
