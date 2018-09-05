@@ -141,4 +141,67 @@ Free memory: 7.73GiB
 
 
 
+## TensorFlow 1.8 image on AMD Radeon GPU
+
+
+
+
+###  # Recommended environment of host
+ OS: Ubuntu16.04.05+
+ Kernel: 4.15+
+ ROCm: 1.8.192+
+
+### # AMD Radeon driver installation on Host
+
+#### - Update linux kernel
+
+ \* If you already used the GPUEater AMD GPU instance, the following command is not required.
+
+```sh
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y linux-generic-hwe-16.04
+sudo reboot
+```
+
+#### - Install AMD GPU Driver (ROCm)
+
+ \* If you already used the GPUEater AMD GPU instance, the following command is not required.
+
+```sh
+sudo apt install -y wget
+wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
+sudo sh -c 'echo deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main > /etc/apt/sources.list.d/rocm.list'
+sudo apt install -y libnuma-dev
+sudo apt install -y rocm-dkms rocm-opencl-dev
+sudo usermod -a -G video $LOGNAME
+```
+
+#### - Make sure to see AMD Radeon GPUs.
+```/opt/rocm/opencl/bin/x86_64/clinfo
+
+ls -la /dev/kfd # AMD Kernele Fusion Driver
+ls -la /dev/dri/ # Display and OpenCL file descriptors
+```
+
+
+###  # Docker-CE on Host
+
+####  - Install docker-ce
+ https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+####  - Run a container with GPU driver file descriptor.
+```docker run -it --device=/dev/kfd --device=/dev/dri --group-add video gpueater/rocm-tensorflow-1.8```
+
+
+
+####  - Make sure GPUs in launched container
+
+```sh
+/opt/rocm/opencl/bin/x86_64/clinfo
+```
+
+
+
+
 
