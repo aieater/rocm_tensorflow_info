@@ -181,7 +181,7 @@ sudo usermod -a -G video $LOGNAME
 #### - Make sure to see AMD Radeon GPUs.
 ```/opt/rocm/opencl/bin/x86_64/clinfo
 
-ls -la /dev/kfd # AMD Kernele Fusion Driver
+ls -la /dev/kfd # AMD Kernel Fusion Driver
 ls -la /dev/dri/ # Display and OpenCL file descriptors
 ```
 
