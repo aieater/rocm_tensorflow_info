@@ -139,9 +139,10 @@ Free memory: 7.73GiB
 ```
 
 
+-----------------------------------------------------
 
 
-## TensorFlow 1.8 image on AMD Radeon GPU
+## TensorFlow 1.8 docker image on AMD Radeon GPU
 
 
 
