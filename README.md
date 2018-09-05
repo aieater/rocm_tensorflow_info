@@ -1,7 +1,7 @@
 # AMD RadeonGPU ROCm-TensorFlow information and memo
 
 
-### ROCm 1.8.x installation for Python3
+### AMD Radeon GPU computing driver ROCm 1.8.x installation for Python3
 Ubuntu18.04 default is Python3.6, but Ubunt16.04 is still Python3.5. 
 ```
 export PIP=pip3
@@ -83,12 +83,12 @@ sudo $PIP install six numpy wheel cython pillow
 
 
 ### ROCm-TensorFlow1.10.0-rc0 binary for Python3.6/Ubuntu18.04
-sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl
+```sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl```
 
 ### ROCm-TensorFlow1.8.0 binary for Python2.7
-http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl
+```sudo pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl```
 ### ROCm-TensorFlow1.8.0 binary for Python3.5 
-http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl
+```sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl```
 
 ### Latest version building and installation memo.
 ROCm tensorflow-upstream  (https://github.com/ROCmSoftwarePlatform/tensorflow-upstream)
