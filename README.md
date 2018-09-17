@@ -82,10 +82,15 @@ git clone https://github.com/ROCmSoftwarePlatform/hcFFT.git && cd hcFFT
 
 sudo $PIP install six numpy wheel cython pillow
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-  
-  
-  
+## Wheel binary
 
 ### AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.6/Ubuntu18.04
 ```
@@ -96,8 +101,6 @@ sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2
 ```
 sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl
 ```
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -121,8 +124,6 @@ sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-c
 ```
 pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl
 ```
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -165,8 +166,6 @@ python3 -c "from tensorflow.python.client import device_lib;device_lib.list_loca
 <br>
 <br>
 <br>
-<br>
-<br>
 
 #### Bazel
 
@@ -204,12 +203,6 @@ Free memory: 7.73GiB
 
 
 -----------------------------------------------------
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
