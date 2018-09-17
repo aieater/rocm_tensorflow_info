@@ -2,9 +2,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
   
 ### AMD Radeon GPU computing driver ROCm 1.8.x installation for Python3
 Ubuntu18.04 default is Python3.6, but Ubunt16.04 is still Python3.5. 
@@ -99,11 +96,13 @@ sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2
 ```
 sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl
 ```
-  
-  
-  
-  
-  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ### AMD Radeon GPU ROCm-TensorFlow1.8.0 binary for Python2.7
 ```
 sudo pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl
@@ -112,22 +111,23 @@ sudo pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp
 ```
 sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl
 ```
-  
-  
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ### CPU TensorFlow1.10.1 binary for Python3.7/MacOSX
 ```
 pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl
 ```
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-  
-  
-  
-  
-  
-  
 ### Latest version building and installation memo.
 ROCm tensorflow-upstream  (https://github.com/ROCmSoftwarePlatform/tensorflow-upstream)
 
@@ -162,7 +162,11 @@ pip3 install ~/src/tensorflow*.whl
 
 python3 -c "from tensorflow.python.client import device_lib;device_lib.list_local_devices()"
 ```
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 #### Bazel
 
@@ -175,6 +179,11 @@ tensorflow-1.8.0	CPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.10.0	N/A	N/A
 tensorflow_gpu-1.8.0	GPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.9.0	7	9
 ```
 
+
+<br>
+<br>
+<br>
+<br>
 
 ### Show devices
 ```
@@ -195,22 +204,30 @@ Free memory: 7.73GiB
 
 
 -----------------------------------------------------
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
 ## TensorFlow 1.8 docker image on AMD Radeon GPU
   
-  
-  
-  
+<br>
+<br>
+<br>
+<br>
 ###  # Recommended environment of host
  OS: Ubuntu16.04.05+
  Kernel: 4.15+
