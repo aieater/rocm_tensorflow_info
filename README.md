@@ -1,4 +1,4 @@
-# AMD RadeonGPU ROCm-TensorFlow information and memo
+# AMD RadeonGPU ROCm-TensorFlow information
 <br>
 <br>
 <br>
@@ -90,17 +90,19 @@ sudo $PIP install six numpy wheel cython pillow
 <br>
 <br>
 
-## Wheel binary
+## Latest wheel binary
 
 ### AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.6/Ubuntu18.04 (Haswell+)
 ```
 sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp36-cp36m-linux_x86_64.whl
 ```
+* Non official. [for GPUEater https://www.gpueater.com/]
   
 ### ~~AMD Radeon GPU ROCm-TensorFlow1.10.0-rc0 binary for Python3.6/Ubuntu18.04~~ (Haswell+)
 ```
 sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl
 ```
+* Non official. [for GPUEater https://www.gpueater.com/]
 <br>
 <br>
 <br>
@@ -122,6 +124,7 @@ sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-c
 ```
 pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl
 ```
+* Non official.
 <br>
 <br>
 <br>
