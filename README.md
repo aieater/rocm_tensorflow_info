@@ -82,16 +82,23 @@ sudo $PIP install six numpy wheel cython pillow
 ```
 
 
-### ROCm-TensorFlow1.10.0-rc0 binary for Python3.6/Ubuntu18.04
+### AMD Radeon GPU ROCm-TensorFlow1.10.0-rc0 binary for Python3.6/Ubuntu18.04
 ```
 sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl
 ```
 
-### ROCm-TensorFlow1.8.0 binary for Python2.7
+### CPU TensorFlow1.10.1 binary for Python3.7/MacOSX
+```
+pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl
+```
+
+
+
+### AMD Radeon GPU ROCm-TensorFlow1.8.0 binary for Python2.7
 ```
 sudo pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl
 ```
-### ROCm-TensorFlow1.8.0 binary for Python3.5 
+### AMD Radeon GPU ROCm-TensorFlow1.8.0 binary for Python3.5 
 ```
 sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl
 ```
@@ -129,6 +136,18 @@ pip3 install ~/src/tensorflow*.whl
 
 
 python3 -c "from tensorflow.python.client import device_lib;device_lib.list_local_devices()"
+```
+
+
+#### Bazel
+
+```
+tensorflow-1.10.1	CPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.15.0	N/A	N/A
+tensorflow_gpu-1.10.1	GPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.15.0	7	9
+tensorflow-1.9.0	CPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.11.0	N/A	N/A
+tensorflow_gpu-1.9.0	GPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.11.0	7	9
+tensorflow-1.8.0	CPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.10.0	N/A	N/A
+tensorflow_gpu-1.8.0	GPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.9.0	7	9
 ```
 
 
