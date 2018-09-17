@@ -100,24 +100,35 @@ sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-c
 ROCm tensorflow-upstream  (https://github.com/ROCmSoftwarePlatform/tensorflow-upstream)
 
 ```
+mkdir -p ~/src
+cd ~/src
 BAZEL=0.15.0
-TENSORFLOW_BRANCH=r1.10-rocm
+TENSORFLOW_BRANCH=v1.10.0-rocm-rc2
 rm -rf ~/.bazel ~/.cache/bazel
-wget https://github.com/bazelbuild/bazel/releases/download/$BAZEL/bazel-$BAZEL-installer-linux-x86_64.sh
+if test -e "bazel-$BAZEL-installer-linux-x86_64.sh"; then
+  echo "bazel-$BAZEL-installer-linux-x86_64.sh found."
+else
+  echo "bazel-$BAZEL-installer-linux-x86_64.sh NOT found."
+  wget https://github.com/bazelbuild/bazel/releases/download/$BAZEL/bazel-$BAZEL-installer-linux-x86_64.sh
+fi
 chmod +x bazel-$BAZEL-installer-linux-x86_64.sh
 ./bazel-$BAZEL-installer-linux-x86_64.sh --user
-sudo apt-get install openjdk-8-jdk
-	
+source ~/.bazel/bin/bazel-complete.bash
+export PATH=~/.bazel/bin:$PATH
+sudo apt-get install -y openjdk-8-jdk
 git clone https://github.com/ROCmSoftwarePlatform/tensorflow-upstream.git
 cd tensorflow-upstream
 git pull origin $TENSORFLOW_BRANCH
-	
 # ./build_rocm_python # 2.7
-./build_rocm_python3 # 3.x
-	
+sudo pip3 uninstall -y tensorflow
+ ./build_rocm_python3 & # 3.x
 bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 cd /tmp/tensorflow_pkg
-sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
+mv * ~/src
+pip3 install ~/src/tensorflow*.whl
+
+
+python3 -c "from tensorflow.python.client import device_lib;device_lib.list_local_devices()"
 ```
 
 
