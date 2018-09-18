@@ -72,13 +72,13 @@ sudo apt-get update && \
     miopen-hip miopengemm \
 
 
-cd ~/src
-git clone https://github.com/ROCmSoftwarePlatform/hcRNG.git && cd hcRNG
-./install.sh
+#cd ~/src
+#git clone https://github.com/ROCmSoftwarePlatform/hcRNG.git && cd hcRNG
+#./install.sh
 
-cd ~/src
-git clone https://github.com/ROCmSoftwarePlatform/hcFFT.git && cd hcFFT
-./install.sh
+#cd ~/src
+#git clone https://github.com/ROCmSoftwarePlatform/hcFFT.git && cd hcFFT
+#./install.sh
 
 sudo $PIP install six numpy wheel cython pillow
 ```
