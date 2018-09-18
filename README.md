@@ -165,8 +165,7 @@ git pull origin $TENSORFLOW_BRANCH
 sudo pip3 uninstall -y tensorflow
  ./build_rocm_python3 & # 3.x
 bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
-cd /tmp/tensorflow_pkg
-mv * ~/src
+cp -f /tmp/tensorflow_pkg/* ~/src/
 pip3 install ~/src/tensorflow*.whl
 
 
