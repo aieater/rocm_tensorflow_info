@@ -94,19 +94,22 @@ sudo $PIP install six numpy wheel cython pillow
 
 ### AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.6/UbuntuOS (Haswell+)
 ```
-sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp36-cp36m-linux_x86_64.whl
+curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
+sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
 ```
 * Non official. [for GPUEater https://www.gpueater.com/]
 
 ### AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.5/UbuntuOS (Haswell+)
 ```
-sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp35-cp35m-linux_x86_64.whl
+curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp35-cp35m-linux_x86_64.whl tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl
+sudo pip3 install tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl
 ```
 * Non official. [for GPUEater https://www.gpueater.com/]
   
 ### ~~AMD Radeon GPU ROCm-TensorFlow1.10.0-rc0 binary for Python3.6/UbuntuOS~~ (Haswell+)
 ```
-sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl
+curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
+sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
 ```
 * Non official. [for GPUEater https://www.gpueater.com/]
 <br>
