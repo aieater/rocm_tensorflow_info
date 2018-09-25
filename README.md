@@ -15,6 +15,10 @@ On this page we will endeavor to describe accurate information based on the know
 - Lightweight ROCm-TensorFlow docker
   + ROCm-TensorFlow on GPUEater
   + ROCm-TensorFlow1.8 docker
+<br>
+<br>
+<br>
+<br>
 
 ### AMD Radeon GPU computing driver ROCm 1.9.x installation for Python3
 Ubuntu18.04 default is Python3.6, but Ubunt16.04 is still Python3.5. 
