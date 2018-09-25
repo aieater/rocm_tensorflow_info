@@ -2,9 +2,24 @@
 <br>
 <br>
 <br>
-  
-### AMD Radeon GPU computing driver ROCm 1.8.x installation for Python3
+The official page of ROCm will contain information that is always confusing.
+On this page we will endeavor to describe accurate information based on the knowledge gained by GPUEater infrastructure development.
+
+- How to setup Radeon GPU Driver (ROCm) in Ubuntu16.04/18.04
+- How to setup ROCm-Tensorflow in Ubuntu16.04/18.04
+ - ROCm(AMDGPU)-TensorFlow 1.8 Python2.7/Python3.5 + UbuntuOS
+ - ROCm(AMDGPU)-TensorFlow 1.10.0-x Python2.7/Python3.5/Python3.6 + UbuntuOS
+ - CPU-TensorFlow 1.10.1 Python3.7 + MacOSX
+- Lightweight ROCm-TensorFlow docker
+ - ROCm-TensorFlow on GPUEater
+ - ROCm-TensorFlow1.8 docker
+
+### AMD Radeon GPU computing driver ROCm 1.9.x installation for Python3
 Ubuntu18.04 default is Python3.6, but Ubunt16.04 is still Python3.5. 
+```
+curl -sL http://install.aieater.com/setup_rocm | bash -
+```
+or
 ```
 export PIP=pip3
 export PYTHON=python3
@@ -71,15 +86,6 @@ sudo apt-get update && \
     rocm-profiler cxlactivitylogger \
     miopen-hip miopengemm \
 
-
-#cd ~/src
-#git clone https://github.com/ROCmSoftwarePlatform/hcRNG.git && cd hcRNG
-#./install.sh
-
-#cd ~/src
-#git clone https://github.com/ROCmSoftwarePlatform/hcFFT.git && cd hcFFT
-#./install.sh
-
 sudo $PIP install six numpy wheel cython pillow
 ```
 <br>
@@ -92,20 +98,32 @@ sudo $PIP install six numpy wheel cython pillow
 
 ## Latest wheel binary
 
-### AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.6/UbuntuOS (Haswell+)
+### AMD Radeon GPU ROCm-TensorFlow1.10.0-latest binary for Python3.6/UbuntuOS (Haswell+)
+```
+sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
+```
+* Non official. [for GPUEater https://www.gpueater.com/]
+
+### AMD Radeon GPU ROCm-TensorFlow1.10.0-latest binary for Python3.5/UbuntuOS (Haswell+)
+```
+sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl
+```
+* Non official. [for GPUEater https://www.gpueater.com/]
+  
+### ~~AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.6/UbuntuOS~~ (Haswell+)
 ```
 curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
 sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
 ```
 * Non official. [for GPUEater https://www.gpueater.com/]
 
-### AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.5/UbuntuOS (Haswell+)
+### ~~AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.5/UbuntuOS~~ (Haswell+)
 ```
 curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp35-cp35m-linux_x86_64.whl tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl
 sudo pip3 install tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl
 ```
 * Non official. [for GPUEater https://www.gpueater.com/]
-  
+
 ### ~~AMD Radeon GPU ROCm-TensorFlow1.10.0-rc0 binary for Python3.6/UbuntuOS~~ (Haswell+)
 ```
 curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
