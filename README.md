@@ -9,12 +9,12 @@ On this page we will endeavor to describe accurate information based on the know
 
 - How to setup Radeon GPU Driver (ROCm) in Ubuntu16.04/18.04
 - How to setup ROCm-Tensorflow in Ubuntu16.04/18.04
- + ROCm(AMDGPU)-TensorFlow 1.8 Python2.7/Python3.5 + UbuntuOS
- + ROCm(AMDGPU)-TensorFlow 1.10.0-x Python2.7/Python3.5/Python3.6 + UbuntuOS
- + CPU-TensorFlow 1.10.1 Python3.7 + MacOSX
+  + ROCm(AMDGPU)-TensorFlow 1.8 Python2.7/Python3.5 + UbuntuOS
+  + ROCm(AMDGPU)-TensorFlow 1.10.0-x Python2.7/Python3.5/Python3.6 + UbuntuOS
+  + CPU-TensorFlow 1.10.1 Python3.7 + MacOSX
 - Lightweight ROCm-TensorFlow docker
- + ROCm-TensorFlow on GPUEater
- + ROCm-TensorFlow1.8 docker
+  + ROCm-TensorFlow on GPUEater
+  + ROCm-TensorFlow1.8 docker
 
 ### AMD Radeon GPU computing driver ROCm 1.9.x installation for Python3
 Ubuntu18.04 default is Python3.6, but Ubunt16.04 is still Python3.5. 
