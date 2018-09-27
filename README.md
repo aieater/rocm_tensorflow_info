@@ -188,6 +188,8 @@ tensorflow_gpu-1.8.0	GPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.9.0	7	9
 ### Show devices
 ```
 python3 -c "from tensorflow.python.client import device_lib;device_lib.list_local_devices()"
+```
+```
 2018-09-05 13:21:43.760601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1520] Found device 0 with properties:
 name: Vega [Radeon RX Vega]
 AMDGPU ISA: gfx900
