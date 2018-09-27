@@ -204,8 +204,9 @@ Free memory: 7.73GiB
 2018-09-05 13:21:43.760697: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1179] Created TensorFlow device (/device:GPU:0 with 7524 MB memory) -> physical GPU (device: 0, name: Vega [Radeon RX Vega], pci bus id: 0000:04:00.0)
 ```
 
+<br>
+<br>
 
------------------------------------------------------
 
 ## How to make sure Radeon GPU memory usage on GPUEater instance.
 
@@ -228,6 +229,11 @@ johndoe@gpueater.local:~$ ./gpueater-smi
 johndoe@gpueater.local:~$ mv gpueater-smi `which rocm-smi`
 ```
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
