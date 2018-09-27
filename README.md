@@ -23,7 +23,7 @@ On this page we will endeavor to describe accurate information based on the know
 <br>
 
 ### AMD Radeon GPU computing driver ROCm 1.9.x installation for Python3
-Ubuntu18.04 default is Python3.6, but Ubunt16.04 is still Python3.5. 
+Ubuntu18.04 default is Python3.6, but Ubunt16.04 is still Python3.5.
 ```
 curl -sL http://install.aieater.com/setup_rocm | bash -
 ```
@@ -106,72 +106,18 @@ sudo $PIP install six numpy wheel cython pillow
 
 ## Latest wheel binary
 
-### AMD Radeon GPU ROCm-TensorFlow1.10.0-latest binary for Python3.6/UbuntuOS (Haswell+)
-```
-sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
-```
-* Non official. [for GPUEater https://www.gpueater.com/]
+|    |  TYPE  |  OS  |  Python  |  TensorFlow  |  Install  |
+| ---- | ---- | ---- | ---- | ---- |
+|  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.6  |  1.10-latest  | sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.5  |  1.10-latest  | sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.6  |  1.10-rc2  | curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl; sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.5  |  1.10-rc2  | curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp35-cp35m-linux_x86_64.whl tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl; sudo pip3 install tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.6  |  1.10-rc0  | curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl; sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.6  |  1.8.0 | sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu16/18  |  2.7  |  1.8.0 | sudo pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.5  |  1.8.0 | sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl |
+|  -  |  CPU  |  MacOSX  |  3.7  |  1.10.1 | pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl |
 
-### AMD Radeon GPU ROCm-TensorFlow1.10.0-latest binary for Python3.5/UbuntuOS (Haswell+)
-```
-sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl
-```
-* Non official. [for GPUEater https://www.gpueater.com/]
-  
-### ~~AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.6/UbuntuOS~~ (Haswell+)
-```
-curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
-sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
-```
-* Non official. [for GPUEater https://www.gpueater.com/]
-
-### ~~AMD Radeon GPU ROCm-TensorFlow1.10.0-rc2 binary for Python3.5/UbuntuOS~~ (Haswell+)
-```
-curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp35-cp35m-linux_x86_64.whl tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl
-sudo pip3 install tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl
-```
-* Non official. [for GPUEater https://www.gpueater.com/]
-
-### ~~AMD Radeon GPU ROCm-TensorFlow1.10.0-rc0 binary for Python3.6/UbuntuOS~~ (Haswell+)
-```
-curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
-sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
-```
-* Non official. [for GPUEater https://www.gpueater.com/]
-<br>
-<br>
-<br>
-
-### AMD Radeon GPU ROCm-TensorFlow1.8.0 binary for Python3.6/UbuntuOS (Haswell+)
-```
-sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl
-```
-* Non official. [for GPUEater https://www.gpueater.com/]
-<br>
-<br>
-<br>
-
-### AMD Radeon GPU ROCm-TensorFlow1.8.0 binary for Python2.7
-```
-sudo pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl
-```
-### AMD Radeon GPU ROCm-TensorFlow1.8.0 binary for Python3.5 
-```
-sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl
-```
-<br>
-<br>
-<br>
-<br>
-
-### CPU TensorFlow1.10.1 binary for Python3.7/MacOSX
-```
-pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl
-```
-* Non official.
-<br>
-<br>
-<br>
 
 ### Latest version building and installation memo.
 ROCm tensorflow-upstream  (https://github.com/ROCmSoftwarePlatform/tensorflow-upstream)
@@ -230,7 +176,7 @@ tensorflow_gpu-1.8.0	GPU	2.7, 3.3-3.6	GCC 4.8	Bazel 0.9.0	7	9
 ### Show devices
 ```
 python3 -c "from tensorflow.python.client import device_lib;device_lib.list_local_devices()"
-2018-09-05 13:21:43.760601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1520] Found device 0 with properties: 
+2018-09-05 13:21:43.760601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1520] Found device 0 with properties:
 name: Vega [Radeon RX Vega]
 AMDGPU ISA: gfx900
 memoryClockRate (GHz) 1.63
@@ -239,8 +185,8 @@ Total memory: 7.98GiB
 Free memory: 7.73GiB
 2018-09-05 13:21:43.760632: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1631] Adding visible gpu devices: 0
 2018-09-05 13:21:43.760644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1040] Device interconnect StreamExecutor with strength 1 edge matrix:
-2018-09-05 13:21:43.760649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1046]      0 
-2018-09-05 13:21:43.760653: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1059] 0:   N 
+2018-09-05 13:21:43.760649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1046]      0
+2018-09-05 13:21:43.760653: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1059] 0:   N
 2018-09-05 13:21:43.760697: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1179] Created TensorFlow device (/device:GPU:0 with 7524 MB memory) -> physical GPU (device: 0, name: Vega [Radeon RX Vega], pci bus id: 0000:04:00.0)
 ```
 
@@ -259,7 +205,7 @@ Free memory: 7.73GiB
 <br>
 
 ## TensorFlow 1.8 docker image on AMD Radeon GPU
-  
+
 <br>
 <br>
 <br>
@@ -321,8 +267,3 @@ ls -la /dev/dri/ # Display and OpenCL file descriptors
 
 
 Also see https://www.gpueater.com/help
-
-
-
-
-
