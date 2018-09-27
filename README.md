@@ -206,6 +206,32 @@ Free memory: 7.73GiB
 
 
 -----------------------------------------------------
+
+## How to make sure Radeon GPU memory usage on GPUEater instance.
+
+johndoe@gpueater.local:~$ curl -O http://install.aieater.com/gpueater/rocm/gpueater-smi
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 45447  100 45447    0     0  1643k      0 --:--:-- --:--:-- --:--:-- 1643k
+
+johndoe@gpueater.local:~$ ./gpueater-smi
+
+
+====================    ROCm System Management Interface    ====================
+================================================================================
+ GPU  Temp    AvgPwr   SCLK     MCLK     Fan      Perf    SCLK OD    MCLK OD  USED MEM
+  0   48c     4.0W     852Mhz   167Mhz   35.69%   auto      0%         0%       7619MB
+================================================================================
+====================           End of ROCm SMI Log          ====================
+
+johndoe@gpueater.local:~$ mv gpueater-smi `which rocm-smi`
+
+
+
+
+
+
+-----------------------------------------------------
 <br>
 <br>
 <br>
