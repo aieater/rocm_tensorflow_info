@@ -250,8 +250,8 @@ johndoe@gpueater.local:~$ mv gpueater-smi `which rocm-smi`
 <br>
 <br>
 <br>
-
-## TensorFlow 1.8 docker image on AMD Radeon GPU
+## Docker
+### TensorFlow 1.8 docker image on AMD Radeon GPU
 
 <br>
 <br>
