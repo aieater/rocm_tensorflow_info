@@ -106,6 +106,11 @@ sudo $PIP install six numpy wheel cython pillow
 
 ## Latest wheel binary
 
+| TH1 | TH2 |
+----|---- 
+| TD1 | TD3 |
+| TD2 | TD4 |
+
 
 |  -  |  TYPE  |  OS  |  Python  |  TensorFlow  |  Install  |
 | ---- | ---- | ---- | ---- | ---- |
