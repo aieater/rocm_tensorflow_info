@@ -2,15 +2,16 @@
 <br>
 <br>
 <br>
-The official page of ROCm will contain information that is always confusing.
-On this page we will endeavor to describe accurate information based on the knowledge gained by GPUEater infrastructure development.
+This README is intended to provide helpful information for Deep Learning developers with AMD ROCm.<br>
+<br>
+Unfortunately, AMD's official repository for ROCm sometimes includes old or missing information. Therefore, on this readme, we will endeavor to describe accurate information based on the knowledge gained by GPUEater infrastructure development and operation.<br>
 <br>
 <br>
 <br>
 <br>
 
-- How to setup Radeon GPU Driver (ROCm) in Ubuntu16.04/18.04
-- How to setup ROCm-Tensorflow in Ubuntu16.04/18.04
+- How to setup Radeon GPU Driver (ROCm) on Ubuntu16.04/18.04
+- How to setup ROCm-Tensorflow on Ubuntu16.04/18.04
   + ROCm(AMDGPU)-TensorFlow 1.8 Python2.7/Python3.5 + UbuntuOS
   + ROCm(AMDGPU)-TensorFlow 1.10.0-x Python2.7/Python3.5/Python3.6 + UbuntuOS
   + CPU-TensorFlow 1.10.1 Python3.7 + MacOSX
@@ -23,7 +24,7 @@ On this page we will endeavor to describe accurate information based on the know
 <br>
 
 ### AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.x) Installation for Python3
-Ubuntu18.04 default is Python3.6, but Ubunt16.04 is still Python3.5.
+Python version 3.6 is the default python interpreter on Ubuntu 18.04. But as for Ubunt16.04, most of developers use Python version 3.5.
 ```
 curl -sL http://install.aieater.com/setup_rocm | bash -
 ```
@@ -131,7 +132,7 @@ sudo $PIP install six numpy wheel cython pillow
 
 
 
-### Latest version building and installation memo.
+### A installation memo of the latest version of TensorFlow.
 ROCm tensorflow-upstream  (https://github.com/ROCmSoftwarePlatform/tensorflow-upstream)
 
 ```
@@ -208,7 +209,7 @@ Free memory: 7.73GiB
 <br>
 
 
-## How to make sure Radeon GPU memory usage on GPUEater instance.
+## How to confirm Radeon GPU's memory usage on GPUEater instance.
 
 ```
 johndoe@gpueater.local:~$ curl -O http://install.aieater.com/gpueater/rocm/gpueater-smi
@@ -259,12 +260,12 @@ johndoe@gpueater.local:~$ mv gpueater-smi `which rocm-smi`
 <br>
 <br>
 <br>
-###  # Recommended environment of host
+###  # Recommended configurations
  OS: Ubuntu16.04.05+
  Kernel: 4.15+
  ROCm: 1.8.192+
 
-### # AMD Radeon driver installation on Host
+### # AMD Radeon driver installation
 
 #### - Update linux kernel
 
@@ -290,7 +291,7 @@ sudo apt install -y rocm-dkms rocm-opencl-dev
 sudo usermod -a -G video $LOGNAME
 ```
 
-#### - Make sure to see AMD Radeon GPUs.
+#### - Make sure to see AMD Radeon GPUs
 ```/opt/rocm/opencl/bin/x86_64/clinfo
 
 ls -la /dev/kfd # AMD Kernel Fusion Driver
@@ -303,12 +304,12 @@ ls -la /dev/dri/ # Display and OpenCL file descriptors
 ####  - Install docker-ce
  https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-####  - Run a container with GPU driver file descriptor.
+####  - Run a container with GPU driver's file descriptor
 ```docker run -it --device=/dev/kfd --device=/dev/dri --group-add video gpueater/rocm-tensorflow-1.8```
 
 
 
-####  - Make sure GPUs in launched container
+####  - Confirm GPUs on launched container
 
 ```sh
 /opt/rocm/opencl/bin/x86_64/clinfo
