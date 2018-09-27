@@ -142,6 +142,15 @@ sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
 <br>
 <br>
 
+### AMD Radeon GPU ROCm-TensorFlow1.8.0 binary for Python3.6/UbuntuOS (Haswell+)
+```
+sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl
+```
+* Non official. [for GPUEater https://www.gpueater.com/]
+<br>
+<br>
+<br>
+
 ### AMD Radeon GPU ROCm-TensorFlow1.8.0 binary for Python2.7
 ```
 sudo pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl
