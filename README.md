@@ -118,6 +118,17 @@ sudo $PIP install six numpy wheel cython pillow
 |  AMD Radeon  |  GPU  |  Ubuntu  |  2.7  |  1.8.0 | sudo pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl |
 |  AMD Radeon  |  GPU  |  Ubuntu  |  3.5  |  1.8.0 | sudo pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl |
 |  -  |  CPU  |  MacOSX  |  3.7  |  1.10.1 | pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl |
+|  -  |  CPU  |  MacOSX  |  2.7  | latest | pip install tensorflow |
+|  -  |  CPU  |  MacOSX  |  ~3.5  |  latest | pip3 install tensorflow |
+|  -  |  CPU  |  Linux  |  2.7  | latest | pip install tensorflow |
+|  -  |  CPU  |  Linux  |  ~3.5  | latest | pip3 install tensorflow |
+|  NVIDIA  |  GPU  |  Linux  |  ~3.5  | latest | pip3 install tensorflow-gpu |
+|  NVIDIA  |  GPU  |  Linux  |  2.7  | latest | pip install tensorflow-gpu |
+|  ANY |  GPU  |  Linux  |  3.x  | unstable | pip3 install tf-nightly-gpu |
+|  ANY |  GPU  |  Linux  |  2.x  | unstable | pip install tf-nightly-gpu |
+
+
+
 
 
 ### Latest version building and installation memo.
