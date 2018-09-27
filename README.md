@@ -113,7 +113,7 @@ sudo $PIP install six numpy wheel cython pillow
 
 
 |  -  |  TYPE  |  OS  |  Python  |  TensorFlow  |  Install  |
-| ---- | ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- | ---- | ---- | ---- |
 |  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.6  |  1.10-latest  | sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl |
 |  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.5  |  1.10-latest  | sudo pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl |
 |  AMD Radeon  |  GPU  |  Ubuntu16/18  |  3.6  |  1.10-rc2  | curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl; sudo pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl |
