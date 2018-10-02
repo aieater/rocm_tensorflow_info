@@ -130,6 +130,32 @@ sudo $PIP install six numpy wheel cython pillow
 
 
 
+### RX580 issue
+RX580 has something problem and unstable. (2018/10/2)
+Getting GPU name was mistaken as Ellesmere "[Radeon RX 470/480]".
+Vega64, 56, FE edition is stable on ROCm-1.9.211 + ROCm-TensorFlow1.8+
+```
+johndoe@gpueater.local:~/projects/models/tutorials/image/cifar10$ python3 cifar10_multi_gpu_train.py 
+Filling queue with 20000 CIFAR images before starting to train. This will take a few minutes.
+2018-10-02 14:48:22.955238: W tensorflow/stream_executor/rocm/rocm_driver.cc:404] creating context when one is currently active; existing: 0x7fe4de1c9d30
+2018-10-02 14:48:22.955859: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1451] Found device 0 with properties: 
+name: Ellesmere [Radeon RX 470/480]
+AMDGPU ISA: gfx803
+memoryClockRate (GHz) 1.38
+pciBusID 0000:01:00.0
+Total memory: 8.00GiB
+Free memory: 7.75GiB
+2018-10-02 14:48:22.955874: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1562] Adding visible gpu devices: 0
+2018-10-02 14:48:22.955888: I tensorflow/core/common_runtime/gpu/gpu_device.cc:989] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-02 14:48:22.955892: I tensorflow/core/common_runtime/gpu/gpu_device.cc:995]      0 
+2018-10-02 14:48:22.955895: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1008] 0:   N 
+2018-10-02 14:48:22.955921: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1124] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7539 MB memory) -> physical GPU (device: 0, name: Ellesmere [Radeon RX 470/480], pci bus id: 0000:01:00.0)
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  No device code available for function: _ZN7rocprim6detail19block_reduce_kernelILj256ELj4ELb0EfNS_18transform_iteratorIPfN10tensorflow10squareHalfIfEEfEES3_fN6hipcub3SumEEEvT3_mT4_T5_T6_
+
+```
+
+
 
 
 ### A installation memo of the latest version of TensorFlow.
