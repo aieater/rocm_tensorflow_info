@@ -108,26 +108,26 @@ sudo $PIP install six numpy wheel cython pillow
 ## Latest wheel binary
 
 
-|  -  |  TYPE  |  OS  |  Python  |  TensorFlow  |  Install  |
-| ---- | ---- | ---- | ---- | ---- | ---- |
-|  AMD Radeon  |  GPU  |  Ubuntu |  3.6  |  1.11-latest  | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.11.0rc1-cp36-cp36m-linux_x86_64.whl |
-|  AMD Radeon  |  GPU  |  Ubuntu |  3.6  |  1.10-latest  | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl |
-|  AMD Radeon  |  GPU  |  Ubuntu  |  3.5  |  1.10-latest  | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl |
-|  AMD Radeon  |  GPU  |  Ubuntu  |  3.6  |  1.10-rc2  | curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl; pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl |
-|  AMD Radeon  |  GPU  |  Ubuntu  |  3.5  |  1.10-rc2  | curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc2-cp35-cp35m-linux_x86_64.whl tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl; pip3 install tensorflow-1.10.0-cp35-cp35m-linux_x86_64.whl |
-|  AMD Radeon  |  GPU  |  Ubuntu  |  3.6  |  1.10-rc0  | curl -sO http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0-rc0-cp36-cp36m-linux_x86_64.whl tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl; pip3 install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl |
-|  AMD Radeon  |  GPU  |  Ubuntu  |  3.6  |  1.8.0 | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl |
-|  AMD Radeon  |  GPU  |  Ubuntu  |  2.7  |  1.8.0 | pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl |
-|  AMD Radeon  |  GPU  |  Ubuntu  |  3.5  |  1.8.0 | pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl |
-|  -  |  CPU  |  MacOSX  |  3.7  |  1.10.1 | pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl |
-|  -  |  CPU  |  MacOSX  |  2.7  | latest | pip install tensorflow |
-|  -  |  CPU  |  MacOSX  |  ~3.5  |  latest | pip3 install tensorflow |
-|  -  |  CPU  |  Linux  |  2.7  | latest | pip install tensorflow |
-|  -  |  CPU  |  Linux  |  ~3.5  | latest | pip3 install tensorflow |
-|  NVIDIA  |  GPU  |  Linux  |  ~3.5  | latest | pip3 install tensorflow-gpu |
-|  NVIDIA  |  GPU  |  Linux  |  2.7  | latest | pip install tensorflow-gpu |
-|  ANY |  GPU  |  Linux  |  3.x  | unstable | pip3 install tf-nightly-gpu |
-|  ANY |  GPU  |  Linux  |  2.x  | unstable | pip install tf-nightly-gpu |
+|  -  |  TYPE  |  OS  |  Python  |  TensorFlow  | Vega | RX5xx |  Install  |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+|  AMD Radeon  |  GPU  |  Ubuntu |  3.6  |  1.11-rc1  |  | | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.11.0rc1-cp36-cp36m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu |  3.6  |  1.10-latest  | | NG | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0latest-cp36-cp36m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu  |  3.6  |  1.10-rc2  | | NG | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0rc2-cp36-cp36m-linux_x86_64.whl  |
+|  AMD Radeon  |  GPU  |  Ubuntu  |  3.5  |  1.10-rc2  | | NG | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0rc2-cp35-cp35m-linux_x86_64.whl  |
+|  AMD Radeon  |  GPU  |  Ubuntu  |  3.6  |  1.10-rc0  | | NG | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0rc0-cp36-cp36m-linux_x86_64.whl  |
+|  AMD Radeon  |  GPU  |  Ubuntu  |  3.6  |  1.8.0 | | NG | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.8.0-cp36-cp36m-linux_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu  |  2.7  |  1.8.0 | | | pip install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp27-cp27mu-manylinux1_x86_64.whl |
+|  AMD Radeon  |  GPU  |  Ubuntu  |  3.5  |  1.8.0 | | | pip3 install http://repo.radeon.com/rocm/misc/tensorflow/tensorflow-1.8.0-cp35-cp35m-manylinux1_x86_64.whl |
+|  -  |  CPU  |  MacOSX  |  3.7  |  1.10.1 | | | pip3 install https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.10.1-py3-none-any.whl |
+|  -  |  CPU  |  MacOSX  |  2.7  | latest | | | pip install tensorflow |
+|  -  |  CPU  |  MacOSX  |  ~3.5  |  latest | | | pip3 install tensorflow |
+|  -  |  CPU  |  Linux  |  2.7  | latest | | | pip install tensorflow |
+|  -  |  CPU  |  Linux  |  ~3.5  | latest | | | pip3 install tensorflow |
+|  NVIDIA  |  GPU  |  Linux  |  ~3.5  | latest | | | pip3 install tensorflow-gpu |
+|  NVIDIA  |  GPU  |  Linux  |  2.7  | latest | | | pip install tensorflow-gpu |
+|  ANY |  GPU  |  Linux  |  3.x  | unstable | | | pip3 install tf-nightly-gpu |
+|  ANY |  GPU  |  Linux  |  2.x  | unstable | | | pip install tf-nightly-gpu |
+
 
 
 
