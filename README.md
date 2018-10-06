@@ -183,7 +183,6 @@ pip3 install --user tensorflow-rocm
 
 |  -  |  TYPE  |  OS  |  Python  |  TensorFlow  | Vega | RX5xx |  Install  |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-|  AMD Radeon  |  GPU  |  Ubuntu |  2.7  |  latest  |  | | pip install tensorflow-rocm |
 |  AMD Radeon  |  GPU  |  Ubuntu |  3.5  |  latest  |  | | pip3 install tensorflow-rocm |
 |  AMD Radeon  |  GPU  |  Ubuntu |  3.6  |  1.11-rc1  |  | | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.11.0rc1-cp36-cp36m-linux_x86_64.whl |
 |  AMD Radeon  |  GPU  |  Ubuntu |  3.6  |  1.10-latest  | | NG | pip3 install http://install.aieater.com/gpueater/rocm/tensorflow-1.10.0latest-cp36-cp36m-linux_x86_64.whl |
