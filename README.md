@@ -23,12 +23,56 @@ Unfortunately, AMD's official repository for ROCm sometimes includes old or miss
 <br>
 <br>
 
-### AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.x) Installation for Python3
-Python version 3.6 is the default python interpreter on Ubuntu 18.04. But as for Ubunt16.04, most of developers use Python version 3.5.
+### AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.224+) Installation for Python3
 ```
 curl -sL http://install.aieater.com/setup_rocm | bash -
 ```
-or
+or 
+```
+sudo apt -y install software-properties-common curl wget # for add-apt-repository
+
+# Python3.5
+PYTHON_VERSION=`python3 --version`
+if [[ $PYTHON_VERSION == *"3.5"* ]] ; then
+  echo 'ok'
+else
+  echo 'uninstall python3'
+  sudo apt remove -y python3 python3-dev python3-pip
+  sudo add-apt-repository -y ppa:deadsnakes/ppa
+  sudo apt-get update
+fi
+sudo apt install -y python3.5 python3.5-dev python3-pip
+
+
+wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
+sudo sh -c 'echo deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main > /etc/apt/sources.list.d/rocm.list'
+sudo apt update
+sudo apt install -y rocm-libs miopen-hip cxlactivitylogger libnuma-dev
+
+sudo usermod -a -G video $LOGNAME
+
+/opt/rocm/opencl/bin/x86_64/clinfo
+
+echo 'export ROCM_HOME=/opt/rocm' >> ~/.profile
+echo 'export HCC_HOME=$ROCM_HOME/hcc' >> ~/.profile
+echo 'export HIP_PATH=$ROCM_HOME/hip' >> ~/.profile
+echo 'export PATH=/usr/local/bin:$HCC_HOME/bin:$HIP_PATH/bin:$ROCM_HOME/bin:$PATH:/opt/rocm/opencl/bin/x86_64' >> ~/.profile
+echo 'export LD_LIBRARY=$LD_LIBRARY:/opt/rocm/opencl/lib/x86_64' >> ~/.profile
+echo 'export LC_ALL="en_US.UTF-8"' >> ~/.profile
+echo 'export LC_CTYPE="en_US.UTF-8"' >> ~/.profile
+
+```
+
+### ROCm-TensorFlow(latest)
+```
+sudo pip3 uninstall -y tensorflow
+sudo pip3 install --user tensorflow-rocm
+```
+
+
+### ~~AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.x) Installation for Python3~~
+(Deprecated)
+~~Python version 3.6 is the default python interpreter on Ubuntu 18.04. But as for Ubunt16.04, most of developers use Python version 3.5.~~
 ```
 export PIP=pip3
 export PYTHON=python3
@@ -52,22 +96,17 @@ sudo usermod -a -G video $LOGNAME
 /opt/rocm/opencl/bin/x86_64/clinfo
 
 
-
-echo 'export HIP_VISIBLE_DEVICES=0' >> ~/.profile
-echo 'export HCC_HOME=/opt/rocm/hcc' >> ~/.profile
-echo 'export ROCM_HOME=/opt/rocm/bin' >> ~/.profile
-echo 'export HIP_PATH=/opt/rocm/hip' >> ~/.profile
-echo 'export PATH=/usr/local/bin:$HCC_HOME/bin:$HIP_PATH/bin:$ROCM_HOME:$PATH:/opt/rocm/opencl/bin/x86_64' >> ~/.profile
+echo 'export ROCM_HOME=/opt/rocm' >> ~/.profile
+echo 'export HCC_HOME=$ROCM_HOME/hcc' >> ~/.profile
+echo 'export HIP_PATH=$ROCM_HOME/hip' >> ~/.profile
+echo 'export PATH=/usr/local/bin:$HCC_HOME/bin:$HIP_PATH/bin:$ROCM_HOME/bin:$PATH:/opt/rocm/opencl/bin/x86_64' >> ~/.profile
 echo 'export LD_LIBRARY=$LD_LIBRARY:/opt/rocm/opencl/lib/x86_64' >> ~/.profile
 echo 'export LC_ALL="en_US.UTF-8"' >> ~/.profile
 echo 'export LC_CTYPE="en_US.UTF-8"' >> ~/.profile
-echo 'export HSA_ENABLE_SDMA=0' >> ~/.profile
+
 
 source ~/.profile
 
-
-export HIP_PLATFORM=hcc
-export PLATFORM=hcc
 
 # Python3
 sudo apt-get update && sudo apt-get install -y \
@@ -96,6 +135,7 @@ sudo apt-get update && \
     miopen-hip miopengemm \
 
 sudo $PIP install six numpy wheel cython pillow
+
 ```
 <br>
 <br>
@@ -105,7 +145,7 @@ sudo $PIP install six numpy wheel cython pillow
 <br>
 <br>
 
-## Latest wheel binary
+## Latest wheel binaries
 
 Finally, official ROCm-TensorFlow registered to PyPI.
 (But Python3.6+ version still only from source build.)
