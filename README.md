@@ -23,7 +23,14 @@ Unfortunately, AMD's official repository for ROCm sometimes includes old or miss
 <br>
 <br>
 
-### AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.224+) Installation for Python3
+### Python3.5 + ROCm Driver + ROCm-TensorFlow easy installer (Recommend)
+```
+curl -sL http://install.aieater.com/setup_rocm_tensorflow_p35 | bash -
+```
+
+----------------------------------------------------------------------
+
+### AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.224+) Installation for Python3.5
 ```
 curl -sL http://install.aieater.com/setup_rocm | bash -
 ```
@@ -63,16 +70,21 @@ echo 'export LC_CTYPE="en_US.UTF-8"' >> ~/.profile
 
 ```
 
-### ROCm-TensorFlow(latest)
+### ROCm-TensorFlow for Python3.5 installation via PyPI (You need to install ROCm-driver before TensorFlow.)
 ```
 sudo pip3 uninstall -y tensorflow
 sudo pip3 install --user tensorflow-rocm
 ```
 
 
+
 ### ~~AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.x) Installation for Python3~~
 (Deprecated)
 ~~Python version 3.6 is the default python interpreter on Ubuntu 18.04. But as for Ubunt16.04, most of developers use Python version 3.5.~~
+```
+curl -sL http://install.aieater.com/setup_rocm_old | bash -
+```
+or 
 ```
 export PIP=pip3
 export PYTHON=python3
