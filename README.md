@@ -244,6 +244,7 @@ johndoe@gpueater.local:~$ curl -O http://install.aieater.com/gpueater/rocm/gpuea
                                  Dload  Upload   Total   Spent    Left  Speed
 100 45447  100 45447    0     0  1643k      0 --:--:-- --:--:-- --:--:-- 1643k
 
+johndoe@gpueater.local:~$ chmod +x ./gpueater-smi
 johndoe@gpueater.local:~$ ./gpueater-smi
 
 
