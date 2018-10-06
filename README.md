@@ -76,12 +76,22 @@ echo 'export LC_CTYPE="en_US.UTF-8"' >> ~/.profile
 
 ```
 
+<br>
+<br>
+
 ### ROCm-TensorFlow for Python3.5 installation via PyPI (You need to install ROCm-driver before TensorFlow.)
 ```
 sudo pip3 uninstall -y tensorflow
 sudo pip3 install --user tensorflow-rocm
 ```
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 ### ~~AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.x) Installation for Python3~~
