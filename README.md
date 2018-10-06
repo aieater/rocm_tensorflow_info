@@ -23,12 +23,17 @@ Unfortunately, AMD's official repository for ROCm sometimes includes old or miss
 <br>
 <br>
 
-### Python3.5 + ROCm Driver + ROCm-TensorFlow easy installer (Recommend)
+### Python3.5 + ROCm Driver + ROCm-TensorFlow1.10+ easy installer (Recommend)
 ```
 curl -sL http://install.aieater.com/setup_rocm_tensorflow_p35 | bash -
 ```
 
+<br>
+<br>
 ----------------------------------------------------------------------
+
+<br>
+<br>
 
 ### AMD Radeon GPU Driver + Computing Engine(ROCm 1.9.224+) Installation for Python3.5
 ```
