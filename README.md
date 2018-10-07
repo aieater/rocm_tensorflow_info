@@ -42,6 +42,7 @@ curl -sL http://install.aieater.com/setup_rocm | bash -
 ```
 or 
 ```
+# Common
 sudo apt -y install software-properties-common curl wget # for add-apt-repository
 
 # Python3.5
@@ -49,12 +50,24 @@ PYTHON_VERSION=`python3 --version`
 if [[ $PYTHON_VERSION == *"3.5"* ]] ; then
   echo 'ok'
 else
-  echo 'uninstall python3'
-  sudo apt remove -y python3 python3-dev python3-pip
+  echo 'install python3.5'
   sudo add-apt-repository -y ppa:deadsnakes/ppa
   sudo apt-get update
 fi
 sudo apt install -y python3.5 python3.5-dev python3-pip
+
+
+if [[ $PYTHON_VERSION == *"3.5"* ]] ; then
+  echo 'only python3.5'
+else
+  echo 'switch to python3.5'
+  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
+  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+fi
+
+python3 --version
+
+
 
 
 wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
@@ -73,6 +86,7 @@ echo 'export PATH=/usr/local/bin:$HCC_HOME/bin:$HIP_PATH/bin:$ROCM_HOME/bin:$PAT
 echo 'export LD_LIBRARY=$LD_LIBRARY:/opt/rocm/opencl/lib/x86_64' >> ~/.profile
 echo 'export LC_ALL="en_US.UTF-8"' >> ~/.profile
 echo 'export LC_CTYPE="en_US.UTF-8"' >> ~/.profile
+
 
 ```
 
