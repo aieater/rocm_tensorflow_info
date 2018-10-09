@@ -374,62 +374,34 @@ johndoe@gpueater.local:~$ mv gpueater-smi `which rocm-smi`
 
 ## Recommend pip3 packages installation
 
-Generate install.sh from python3 code.
+- tensorflow-rocm
+- keras
+- cython
+- numpy
+- moviepy
+- requests
+- sklearn
+- cairocffi
+- matplotlib
+- editdistance
+- pandas
+- portpicker
+- h5py
+- PIL
+- darkflow
+- cv2
+- jupyter
+
+
+
 ```
-#!/usr/local/bin python3
-import subprocess
-import traceback
-
-package_list = [
-    {'name':'tensorflow', 'install':'sudo -H pip3 install tensorflow-rocm'},
-    {'name':'keras', 'install':'sudo -H pip3 install Keras'},
-    {'name':'cython', 'install':'sudo -H pip3 install cython'},
-    {'name':'numpy', 'install':'sudo -H pip3 install numpy'},
-    {'name':'moviepy', 'install':'sudo -H pip3 install moviepy'},
-    {'name':'scipy', 'install':'sudo -H pip3 install scipy'},
-    {'name':'requests', 'install':'sudo -H pip3 install requests'},
-    {'name':'sklearn', 'install':'sudo -H pip3 install sklearn'},
-    {'name':'cairocffi', 'install':'sudo -H pip3 install cairocffi'},
-    {'name':'matplotlib', 'install':'sudo -H pip3 install matplotlib'},
-    {'name':'editdistance', 'install':'sudo -H pip3 install editdistance'},
-    {'name':'pandas', 'install':'sudo -H pip3 install pandas'},
-    {'name':'portpicker', 'install':'sudo -H pip3 install portpicker'},
-    {'name':'h5py', 'install':'sudo apt remove -y python3-h5py;sudo -H pip3 install h5py'},
-    {'name':'PIL', 'install':'pillow', 'install':'sudo -H pip3 install pillow'},
-    {'name':'darkflow', 'install':'mkdir ~/src/;git clone https://github.com/thtrieu/darkflow.git;cd darkflow;sudo -H python3 setup.py install'},
-    {'name':'cv2', 'install':'curl -sL http://install.aieater.com/setup_opencv | bash -'},
-]
-
-istr = ""
-for m in package_list:
-    try:
-        exec('import ' + m['name'])
-        print("State:OK " + m['name'])
-    except:
-        print("State:-- " + m['name'])
-        istr += m['install'] + "\n"
-
-
-cmd_list = [
-    {'name':'jupyter','command':['jupyter','--version'],'install':'sudo -H pip3 install jupyter'}
-]
-
-for m in cmd_list:
-    try:
-        subprocess.call(m['command'])
-        print("State:OK " + m['name'])
-    except:
-        print("State:-- " + m['name'])
-        istr += m['install'] + "\n"
-
-f = open('./install.sh',"w")
-f.write(istr)
-f.close()
+curl -sL http://install.aieater.com/setup_ml_submod | bash -
 ```
-
-### Install
+or
 ```
-chmod +x ./install.sh
+curl -o http://install.aieater.com/check_mod.py
+python3 check_mod.py
+chmod +x install.sh
 ./install.sh
 ```
 
