@@ -433,6 +433,19 @@ chmod +x ./install.sh
 ./install.sh
 ```
 
+<br>
+<br>
+<br>
+<br>
+
+---------------------------------------------------------------
+
+<br>
+<br>
+<br>
+<br>
+
+
 ## Docker
 
 ### TensorFlow 1.8 docker image on AMD Radeon GPU
