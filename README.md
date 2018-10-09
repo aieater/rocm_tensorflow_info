@@ -49,7 +49,7 @@ sudo apt -y install software-properties-common curl wget # for add-apt-repositor
 # Python3.5
 PYTHON_VERSION=`python3 --version`
 if [[ $PYTHON_VERSION == *"3.5"* ]] ; then
-  echo 'ok'
+  echo 'already python3.5'
 else
   echo 'install python3.5'
   sudo add-apt-repository -y ppa:deadsnakes/ppa
@@ -59,7 +59,7 @@ sudo apt install -y python3.5 python3.5-dev python3-pip
 
 
 if [[ $PYTHON_VERSION == *"3.5"* ]] ; then
-  echo 'only python3.5'
+  echo 'already python3.5'
 else
   echo 'switch to python3.5'
   sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
