@@ -187,7 +187,7 @@ sudo $PIP install six numpy wheel cython pillow
 
 ## Latest wheel binaries
 
-Finally, official ROCm-TensorFlow registered to PyPI.
+Finally, official ROCm-TensorFlow has registered to PyPI.
 (But Python3.6+ version still only from source build.)
 ```
 pip3 install --user tensorflow-rocm
