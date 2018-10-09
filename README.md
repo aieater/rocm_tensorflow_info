@@ -47,28 +47,25 @@ sudo apt update
 sudo apt -y install software-properties-common curl wget # for add-apt-repository
 
 # Python3.5
-PYTHON_VERSION=`python3 --version`
-if [[ $PYTHON_VERSION == *"3.5"* ]] ; then
-  echo 'already python3.5'
+PYTHON35=false
+if [[ `python3 --version` == *"3.5"* ]] ; then
+  echo 'python3.5 -- yes'
+  PYTHON35=true
 else
-  echo 'install python3.5'
+  echo 'python3.5 -- no'
+  PYTHON35=false
+fi
+
+if [ $PYTHON35 == 'false' ] ; then
   sudo add-apt-repository -y ppa:deadsnakes/ppa
   sudo apt-get update
-fi
-sudo apt install -y python3.5 python3.5-dev python3-pip
-
-
-if [[ $PYTHON_VERSION == *"3.5"* ]] ; then
-  echo 'already python3.5'
-else
-  echo 'switch to python3.5'
-  sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
+  sudo apt install -y python3.5 python3.5-dev python3-pip
   sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+  sudo update-alternatives --config python3
+  python3 --version
+  curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
+  sudo -H python3 /tmp/get-pip.py --force-reinstall
 fi
-
-sudo update-alternatives --config python3
-
-python3 --version
 
 
 
@@ -77,9 +74,7 @@ wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key ad
 sudo sh -c 'echo deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main > /etc/apt/sources.list.d/rocm.list'
 sudo apt update
 sudo apt install -y rocm-libs miopen-hip cxlactivitylogger libnuma-dev
-
 sudo usermod -a -G video $LOGNAME
-
 /opt/rocm/opencl/bin/x86_64/clinfo
 
 echo 'export ROCM_HOME=/opt/rocm' >> ~/.profile
@@ -89,6 +84,7 @@ echo 'export PATH=/usr/local/bin:$HCC_HOME/bin:$HIP_PATH/bin:$ROCM_HOME/bin:$PAT
 echo 'export LD_LIBRARY=$LD_LIBRARY:/opt/rocm/opencl/lib/x86_64' >> ~/.profile
 echo 'export LC_ALL="en_US.UTF-8"' >> ~/.profile
 echo 'export LC_CTYPE="en_US.UTF-8"' >> ~/.profile
+
 
 ```
 
