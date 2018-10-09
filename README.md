@@ -371,7 +371,8 @@ johndoe@gpueater.local:~$ mv gpueater-smi `which rocm-smi`
 <br>
 <br>
 <br>
-### Recommend pip3 packages installation
+
+## Recommend pip3 packages installation
 
 Generate install.sh from python3 code.
 ```
