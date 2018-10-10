@@ -65,6 +65,7 @@ if [ $PYTHON35 == 'false' ] ; then
   python3 --version
   curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
   sudo -H python3 /tmp/get-pip.py --force-reinstall
+  sudo apt-get remove -y --purge python3-apt
 fi
 
 
