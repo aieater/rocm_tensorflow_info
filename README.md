@@ -400,7 +400,7 @@ curl -sL http://install.aieater.com/setup_ml_submod | bash -
 ```
 or
 ```
-curl -o http://install.aieater.com/check_mod.py
+curl -O http://install.aieater.com/check_mod.py
 python3 check_mod.py
 chmod +x install.sh
 ./install.sh
