@@ -31,12 +31,9 @@ curl -sL http://install.aieater.com/setup_rocm_tensorflow_p35 | bash -
 <br>
 <br>
 
-----------------------------------------------------------------------------
-
-### Make sure devices to recognize AMD GPUs
+### Make sure OpenCL AMD GPU devices
 
 ```
-
 johndoe@local:~$ /opt/rocm/opencl/bin/x86_64/clinfo
 
 Number of platforms:				 1
@@ -146,7 +143,56 @@ Number of devices:				 1
   
 ```
 
+<br>
+<br>
 
+
+#### Make sure TensorFlow AMD GPU devices
+```
+johndoe@local:~$ python3 -c "from tensorflow.python.client import device_lib;print(device_lib.list_local_devices())"
+
+2018-10-11 21:17:31.776018: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-10-11 21:17:31.778774: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1524] Found device 0 with properties: 
+name: Ellesmere [Radeon RX 470/480]
+AMDGPU ISA: gfx803
+memoryClockRate (GHz) 1.38
+pciBusID 0000:01:00.0
+Total memory: 8.00GiB
+Free memory: 7.75GiB
+2018-10-11 21:17:31.778788: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1635] Adding visible gpu devices: 0
+2018-10-11 21:17:31.778802: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1044] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-10-11 21:17:31.778806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1050]      0 
+2018-10-11 21:17:31.778810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1063] 0:   N 
+2018-10-11 21:17:31.778830: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1183] Created TensorFlow device (/device:GPU:0 with 7539 MB memory) -> physical GPU (device: 0, name: Ellesmere [Radeon RX 470/480], pci bus id: 0000:01:00.0)
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 15907518430835446805
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 7905424180
+locality {
+  bus_id: 2
+  numa_node: 1
+  links {
+  }
+}
+incarnation: 9147052532367269657
+physical_device_desc: "device: 0, name: Ellesmere [Radeon RX 470/480], pci bus id: 0000:01:00.0"
+```
+
+---------------------------------------------------------------------------------
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## Optionals
 
 <br>
 <br>
