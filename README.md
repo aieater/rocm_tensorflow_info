@@ -56,7 +56,9 @@ else
   PYTHON35=false
 fi
 
-if [ $PYTHON35 == 'false' ] ; then
+if [ $PYTHON35 == 'true' ] ; then
+  sudo apt install -y python3.5 python3.5-dev python3-pip
+else
   sudo add-apt-repository -y ppa:deadsnakes/ppa
   sudo apt-get update
   sudo apt install -y python3.5 python3.5-dev python3-pip
