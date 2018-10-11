@@ -444,7 +444,7 @@ cd deep_learning_yolo_v3
 python3 yolo.py image.jpg
 ```
  References
-  - https://github.com/thtrieu/darkflow
+  - https://github.com/qqwweee/keras-yolo3
   - https://pjreddie.com/darknet/yolo/
 
 
