@@ -74,7 +74,7 @@ fi
 wget -qO - http://repo.radeon.com/rocm/apt/debian/rocm.gpg.key | sudo apt-key add -
 sudo sh -c 'echo deb [arch=amd64] http://repo.radeon.com/rocm/apt/debian/ xenial main > /etc/apt/sources.list.d/rocm.list'
 sudo apt update
-sudo apt install -y rocm-libs miopen-hip cxlactivitylogger libnuma-dev
+sudo apt install -y rocm-dkms rocm-libs miopen-hip cxlactivitylogger libnuma-dev
 sudo usermod -a -G video $LOGNAME
 /opt/rocm/opencl/bin/x86_64/clinfo
 
