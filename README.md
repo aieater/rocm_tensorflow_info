@@ -652,7 +652,7 @@ docker run -it --device=/dev/kfd --device=/dev/dri gpueater/ubuntu16-rocm-1.9.21
 ### Old images
 
 ```
-docker run -it --device=/dev/kfd --device=/dev/dri  gpueater/rocm-tensorflow-1.8
+docker run -it --device=/dev/kfd --device=/dev/dri gpueater/rocm-tensorflow-1.8
 ```
 
 <br>
