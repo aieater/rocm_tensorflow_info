@@ -34,6 +34,10 @@ curl -sL http://install.aieater.com/setup_rocm_tensorflow_p35 | bash -
 ### Make sure OpenCL AMD GPU devices
 
 ```
+/opt/rocm/opencl/bin/x86_64/clinfo
+```
+
+```
 johndoe@local:~$ /opt/rocm/opencl/bin/x86_64/clinfo
 
 Number of platforms:				 1
@@ -148,6 +152,11 @@ Number of devices:				 1
 
 
 #### Make sure TensorFlow AMD GPU devices
+
+```
+python3 -c "from tensorflow.python.client import device_lib;print(device_lib.list_local_devices())"
+```
+
 ```
 johndoe@local:~$ python3 -c "from tensorflow.python.client import device_lib;print(device_lib.list_local_devices())"
 
