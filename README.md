@@ -646,13 +646,13 @@ https://hub.docker.com/r/gpueater/rocm-tensorflow-1.8/
 ### Latest
 
 ```
-docker run -it --device=/dev/kfd --device=/dev/dri --group-add video gpueater/ubuntu16-rocm-1.9.211-tensorflow-1.11.0
+docker run -it --device=/dev/kfd --device=/dev/dri gpueater/ubuntu16-rocm-1.9.211-tensorflow-1.11.0
 ```
 
 ### Old images
 
 ```
-docker run -it --device=/dev/kfd --device=/dev/dri --group-add video gpueater/rocm-tensorflow-1.8
+docker run -it --device=/dev/kfd --device=/dev/dri  gpueater/rocm-tensorflow-1.8
 ```
 
 <br>
