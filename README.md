@@ -17,7 +17,7 @@ Unfortunately, AMD's official repository for ROCm sometimes includes old or miss
   + CPU-TensorFlow 1.1x.x Python3.7 + MacOSX
 - Lightweight ROCm-TensorFlow docker
   + ROCm-TensorFlow on GPUEater
-  + ROCm-TensorFlow1.8 docker
+  + ROCm-TensorFlow1.11 docker
 <br>
 <br>
 <br>
