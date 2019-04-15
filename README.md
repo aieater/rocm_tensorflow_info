@@ -23,6 +23,35 @@ Unfortunately, AMD's official repository for ROCm sometimes includes old or miss
 <br>
 <br>
 
+### Issue: ROCm2.3 + ROCm-TensorFlow 1.12.0 [Apr, 15th, 2019] 
+We got an error of hip module when ROCm driver updated 2.2 to 2.3 on RadeonVII.
+
+```
+> python3 -c "from tensorflow.python.client import device_lib; device_lib.list_local_devices()"
+.
+.
+.
+
+ImportError: /usr/local/lib/python3.5/dist-packages/tensorflow/python/../libtensorflow_framework.so: undefined symbol: hipModuleGetGlobal
+```
+
+If you got that same error, you have to install newer version like this.
+
+```
+sudo pip3 install tensorflow-rocm==1.13.1
+```
+or
+```
+sudo pip3 install tensorflow-rocm # latest
+```
+
+
+<br>
+<br>
+<br>
+<br>
+
+
 ### Python3.5 + ROCm Driver + ROCm-TensorFlow1.12+ easy installer (Recommend)
 ```
 curl -sL http://install.aieater.com/setup_rocm_tensorflow_p35 | bash -
